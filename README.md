@@ -48,7 +48,9 @@ Steps:
 question:
 How would I calculate restock times?
 
-1. Follow the same process as step 1 in the above task to pull data into BigQuery every 5 minutes. The raw data will go into the `zapp-case-study.bronze_warehouse.warehouse_product_task2` table created by `create_dataset_tables_task2.py`. The data will be appended to the table and the update time will also be captured.
+1. Upload data into BigQuery from the Postgres DB into a "Bronze" Schema
+    - Follow the same process as step 1 in the above task to pull data into BigQuery every 5 minutes. The raw data will go into the `zapp-case-study.bronze_warehouse.warehouse_product_task2` table created by `create_dataset_tables_task2.py`. The data will be appended to the table and the update time will also be captured.
+    - The `gsheet_to_bigquery_task2.py` will upload the data from the product google sheet (same as product.csv in dummy_data) into the `warehouse_product_task2` table. I have set it up so that it will run the upload 3 times, to resemble new data coming in every 5 minutes
 2. Upload the data into a new table in a the "Silver" schema
     - I've created a scheduled query to run every 15 minutes (see `bronze_to_silver_task2.py`)
     ![schedule_query](./images/schedule_query.png)
