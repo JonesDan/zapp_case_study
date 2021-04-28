@@ -10,7 +10,7 @@ For the BigQuery schema architecture, I've gone with the Bronze, Silver, Gold sc
 
 I'm also making the most of the 14 day free trial that Tableau provides to test the BigQuery -> Tableau connection
 
-Below I've described each step I would take to complete the task along with referencing the python scripts I ran, which also contains my sql code.
+Below I've described each step I would take to complete the task along with referencing the python scripts I used to build my test pipeline, which also contains my sql code.
 
 All my functions can be found in the `functions.py` file
 
