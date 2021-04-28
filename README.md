@@ -2,9 +2,9 @@
 
 ## Setup
 
-To learn a bit more about GCP I decided to build some data pipelines using some GCP tools and the python library. I decided to use google sheets as the original data source instead of a Postgres DB. The data for the google sheets can be found in the dummy_data folder.
+To learn a bit more about GCP I decided to build data pipelines using some GCP tools and the python library. I used google sheets as the original data source instead of a Postgres DB. The data for the google sheets can be found in the dummy_data folder.
 
-To set this up I needed to create a service account. I have stored the credentials in a file called client_secrets.json (same structure as client_secrets_example.json). I also had to enable a few of the GCP apis and grant my service account access to the google sheets I created.
+To set this up I needed to create a service account. I stored the credentials in a file called client_secrets.json (same structure as client_secrets_example.json). I enabled a few of the GCP apis and gave my service account access to the google sheets files.
 
 For the BigQuery schema architecture, I've gone with the Bronze, Silver, Gold schema approach where Bronze is raw data, Silver is cleaned data and Gold is ready to be reported on.
 
