@@ -34,7 +34,7 @@ Steps:
     - To get the table needed for the report we need to merge the 2 tables. The product table contains the warehouse information inside the sku so that'll need to be extracted in order to merge onto the warehouse overview
     - The output is one table (`warehouse_product_overview`) with all the information needed for the report which is to be stored in a "Silver" Schema
     ![BQuery](./images/Big_Query.png)
-    - I've created a scheduled query (see `bronze_to_silver.py`) to run once a month and to append the latest months data into the table. That way we can get a monthly view of product quantities per warehouse and country.
+    - I've created a scheduled query (see `bronze_to_silver.py`) to run once a month
     ![schedule_query](./images/schedule_query.png)
     
 

@@ -29,7 +29,7 @@ table_id_product = 'warehouse_product_task2'
 # function to pull data from google sheets
 df_product = f.pull_gs_data(service,spreadsheet_id=gsheet_product)
 for x in range(3):
-    # function to upload dataframe into Query
+    # function to upload dataframe into Query. This will append the dataframe to the bronze table
     f.upload_dataframe(client,dataset,table_id_product,df_product,truncate=False)
 
     # Change inventory quantity so that its different for next upload

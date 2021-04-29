@@ -29,7 +29,7 @@ table_id_product = 'warehouse_product'
 # function to pull data from google sheets
 df_warehouse_overview = f.pull_gs_data(service,spreadsheet_id=gsheet_warehouse_overview)
 df_product = f.pull_gs_data(service,spreadsheet_id=gsheet_product)
-# function to upload dataframe into Query
+# function to upload dataframe into Query. This will truncate the table and replace with the most recent data
 f.upload_dataframe(client,dataset,table_id_warehouse,df_warehouse_overview,truncate=True)
 f.upload_dataframe(client,dataset,table_id_product,df_product,truncate=True)
 
