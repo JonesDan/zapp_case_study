@@ -64,7 +64,8 @@ def upload_dataframe(client,dataset_id,table_id,df,truncate):
 
     table_id = f"{client.project}.{dataset_id}.{table_id}"
 
-
+    # add the update_time schema in the definition to make sure the column is defined as a timestamp
+    
     job_config = bigquery.LoadJobConfig(
         # Optionally, set the write disposition. BigQuery appends loaded rows
         # to an existing table by default, but with WRITE_TRUNCATE write
